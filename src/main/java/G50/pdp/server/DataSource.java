@@ -1,0 +1,18 @@
+package G50.pdp.server;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+import org.springframework.stereotype.Component;
+
+@Component
+public class DataSource {
+private EntityManagerFactory entityManagerFactory;
+    public DataSource() {
+        entityManagerFactory = Persistence.createEntityManagerFactory("spring_test");
+    }
+
+    public EntityManager getEntityManager() {
+        return entityManagerFactory.createEntityManager();
+    }
+}
