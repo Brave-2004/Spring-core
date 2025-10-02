@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class DataSource {
 private EntityManagerFactory entityManagerFactory;
     public DataSource() {
-        entityManagerFactory = Persistence.createEntityManagerFactory("spring_test");
+        entityManagerFactory = Persistence.createEntityManagerFactory("employee_db");
     }
 
     public EntityManager getEntityManager() {
